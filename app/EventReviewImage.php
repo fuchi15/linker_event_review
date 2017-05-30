@@ -3,19 +3,20 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class EventReviewImage extends Model
 {
+    //
+    protected $table = 'EventReviewImage';
     use Notifiable;
-
-    /**
+     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'code', 'name', 'email', 'student_number', 'google_id','student_name','image_pass','introduction','event_join_notice','event_cancel_notice','favorite_tag_notice'
+        'event_id','image_pass'
     ];
 
     /**
