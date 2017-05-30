@@ -38,7 +38,6 @@ class EventReviewController extends Controller
     {
         //
         $review = $request->all();
-        dd($request);
         $eventreview = new EventReview();
         $eventreview->event_id = 1;
         $eventreview->user_id = 1;

@@ -17,9 +17,9 @@ class CreateEventReviewTable extends Migration
         Schema::create('EventReview',function(Blueprint $table){
             $table->increments('id');
             $table->integer('event_id')->unsigned();
-            $table->foreign('event_id')->references('event_id')->on('User_Event');
+            $table->foreign('event_id')->references('id')->on('Event');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('user_id')->on('User_Event');
+            $table->foreign('user_id')->references('id')->on('User');
             $table->string('comment');
             $table->string('evaluation');
             $table->timestamps();
